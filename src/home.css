@@ -1,0 +1,395 @@
+
+
+#logo {
+    width: 70px;
+    height: auto;
+}
+
+
+.nav-link {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: rgb(237, 27, 10) !important;
+}
+
+
+
+/* #homeContainer {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+}
+
+#HomeFirstImg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#homeWelcome {
+    position: absolute;
+    top: 71%;
+    left: 20%;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#HomeWelcomeImgH4 {
+    position: absolute;
+    top: 79%;
+    text-align: justify !important;
+    color: white;
+    left: 10%;
+}
+
+#HomeWelcomeImgH4-2 {
+    position: absolute;
+    top: 83%;
+    color: white;
+    left: 25%;
+}
+
+.registerBtn {
+    position: absolute;
+    top: 89%;
+    left: 44%;
+    width: 11%;
+    height: 4%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(237, 27, 10);
+    color: white;
+    font-size: medium;
+} */
+
+
+#quoteFirstLine {
+    text-align: center;
+}
+
+#quoteSecondLine {
+    text-align: center;
+    top: 100%;
+}
+
+#author {
+    font-size: 32px;
+    font-weight: bold !important;
+    color: rgb(237, 27, 10);
+
+}
+
+.quoteContainer {
+    justify-content: center;
+    width: auto;
+    height: 120px;
+    background-color: rgb(251, 233, 239);
+    margin-top: -20px;
+    padding-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+/* For devices with a max-width of 768px (tablets and small screens) */
+@media (max-width: 1100px) {
+    #homeWelcome {
+        font-size: 2.1rem;
+    }
+    #HomeWelcomeImgH4 {
+        position: absolute;
+        left: 5%;
+        font-size: 130%;
+    }
+    #HomeWelcomeImgH4-2{
+        left: 17%;
+        top: 84%;
+        font-size: 130%;
+    }
+    .registerBtn {
+        position: absolute;
+        top: 89%;
+        left: 44%;
+        width: 14%;
+        height: 6%;
+        font-size: medium;
+    }
+
+}
+@media (max-width: 918px) {
+    #homeWelcome {
+        font-size: 2.1rem;
+    }
+    #HomeWelcomeImgH4 {
+        position: absolute;
+        left: 4%;
+        font-size: 20px;
+    }
+    #HomeWelcomeImgH4-2{
+        left: 15%;
+        top: 83%;
+        font-size: 20px;
+    }
+    .registerBtn {
+        position: absolute;
+        top: 89%;
+        left: 44%;
+        width: 14%;
+        height: 6%;
+        font-size: medium;
+    }
+}
+@media (max-width: 918px) {
+        #HomeWelcomeImgH4-2{
+        left: 15%;
+        top: 83%;
+        font-size: 20px;
+    }
+}
+
+/* __________________________________reopen card___________________________________________________ */
+
+#news {
+    color: rgb(237, 27, 10);
+}
+
+.latestNews {
+    text-align: center;
+}
+
+#cardImg {
+    width: 108%;
+    height: 200px;
+    margin-left: -13px;
+}
+
+#schoolReopen {
+    color: rgb(237, 27, 10);
+    margin-left: 50px;
+}
+
+#contentReopen {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.reopenCard {
+    border: 1px solid rgb(219, 214, 214);
+    width: 26% !important;
+    height: 100%;
+    color: rgb(3, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 2%;
+}
+
+#reopencard-container {
+    gap: 30px;
+}
+
+/* For devices with a max-width of 768px (tablets and small screens) */
+@media (max-width: 768px) {
+    #news {
+        color: rgb(237, 27, 10);
+    }
+    
+   .latestNews {
+        text-align: center;
+        margin-top:-5%;
+    }
+   
+    #schoolReopen {
+        color: rgb(237, 27, 10);
+    } 
+
+    
+    .reopenCard {
+        border: 1px solid rgb(219, 214, 214);
+        width: 26% !important;
+        height: 100%;
+        color: rgb(3, 0, 0);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-top: 2%;
+        /* width: 100%; */
+    }
+}
+
+/* 
+_________________________________event card________________________________________ */
+
+.eventCard {
+    text-align: center;
+}
+
+#eventimg {
+    width: 100%;
+
+    border-radius: 5%;
+}
+
+#date {
+    border: 5px;
+    background-color: rgb(237, 27, 10);
+    font-size: 13px;
+    color: white;
+    padding: 9px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+#time{
+    margin-right:70% ;
+    margin-top: 3% ;
+}
+#address{
+     margin-right: 68%;
+    color: gray;
+}
+#meetingContent{
+    color: gray;
+    margin-right: 1%;
+}
+#meeting{
+    margin-right: 43%;
+}
+#meetingContent-2{
+   margin-right: 23%;
+}
+#seeMore{
+    color:rgb(237, 27, 10) ;
+    border-color: rgb(237, 27, 10);
+    width: 100px;
+
+}
+
+/* ________________________________________Acheivement card______________________________________ */
+#acheivement {
+    color: rgb(237, 27, 10);
+}
+
+#student {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#medalImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; 
+}
+
+#competition {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+}
+
+.acheiveCard {
+    border: 1px solid rgb(219, 214, 214);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 17px 22px; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .second-achievement-container {
+    margin-top: -50px;
+    margin-bottom: 100px ;
+} */
+
+#homeImgFour{
+    width: 120%;
+    height: 100%;
+    margin-top: 5%;
+}
+#grad-head{
+    margin-left: 7%;
+}
+#grad-date{
+    margin-left: 7%;
+}
+#grad-cont{
+    margin-left: 7%;
+}
+#readmore-btn{
+    background-color: rgb(237, 27, 10);
+    margin-left: 28%;
+    border: none;
+    border-radius: 20px;
+    width: 15%;
+    height: 17%;
+    color: white;
+}
+
+/* _____________________________________graduation card____________________________________________ */
+.grad-class{
+    margin-top: 1%;
+    width: 100%;
+    height: 40%;
+}
+#readBtn{
+    margin-left: 2%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 50%;
+    height: 9%;
+    background-color: rgb(237, 27, 10);
+}
+#gradContainer{
+    border: 5%;
+    margin-top: 50px;
+    border: 1px solid rgb(219, 214, 214);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: space-between;
+}
+#facebook-icon{
+     width: 5%;
+     margin-left: 46%;
+     height:20%;
+     margin-top: 15px;
+     margin-right: 5px;
+     
+}
+#instagram-icon{
+    width: 4%;
+    height:20%;
+    margin-top: 15px;
+}
+.footer-container{
+    background-color: rgb(251, 233, 239) ;
+  
+}
+#footer-msg{
+margin-left: 25%;
+margin-top: 2%;
+}
+.email-box{
+    margin-left: 35%;
+    margin-top: 1%;
+    width: 25%;
+    color: rgb(237, 27, 10);
+}
+#subscribe-btn{
+    margin-left: 1%;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(237, 27, 10);
+    height:11%;
+    color: white;
+    font-weight: 600;
+}
+#footer-add{
+    margin-left: 40%;
+    margin-top: 2%;
+    font-weight: 600;
+}
+#footer{
+    margin-top: 5%;
+    
+}

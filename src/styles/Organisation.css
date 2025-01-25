@@ -1,0 +1,168 @@
+.org-outer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+  }
+  
+  .org-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 1093px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .org-title {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .org-title-highlight {
+    color: #e63946;
+    font-weight: bold;
+  }
+  
+  .org-row {
+    display: flex;
+    align-items: center;
+    gap: 78px;
+    position: relative;
+  }
+  
+  .org-number-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 60px;
+    padding-top: 3px;
+    position: relative;
+  }
+  
+  .org-number-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4302b;
+    color: #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .org-arrow-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: -1rem;
+  }
+  
+  .org-arrow-line {
+    margin-top: 2px;
+    height: 80px;
+    width: 2px;
+    background-color: transparent;
+    border-left: 2px dashed #f46565;
+    position: relative;
+    left: 35px;
+  }
+  
+  .org-arrow-head {
+    content: "";
+    position: absolute;
+    top: 77px;
+    left: 31px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #f46565;
+  }
+  
+  .org-title-column {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .org-details-column {
+    flex: 5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .org-details-column span {
+    color: #e63946;
+    font-weight: bold;
+  }
+  
+  .org-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+ 
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .org-row {
+      display: flex;
+      flex-direction: column; /* Stack everything vertically */
+      align-items: flex-start; /* Align to the left */
+      gap: 10px; /* Space between the rows */
+    }
+  
+    .org-number-column,
+    .org-title-column {
+      display: inline-block; /* Ensure number and title are inline */
+      vertical-align: middle; /* Align them properly */
+    }
+  
+    .org-number-column {
+      margin-right: 10px; /* Add space between number and title */
+    }
+  
+    .org-title-column {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+    }
+  
+    .org-details-column {
+      font-size: 14px;
+      padding: 15px;
+      text-align: left; /* Align description text to the left */
+      margin-top: 10px; /* Space between title and description */
+    }
+  
+    .org-arrow-container {
+      display: none; /* Hide arrows on small screens */
+    }
+  }
+  

@@ -1,0 +1,9 @@
+.card-footer{
+    background-color: white;
+    border-top: transparent;
+}
+
+.card-header{
+    background-color: white;
+    border-bottom: transparent;
+}

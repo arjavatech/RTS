@@ -1,0 +1,89 @@
+/* Wrapper */
+.policies-and-guidelines-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(249, 220, 225);
+    gap: 40px;
+  }
+  
+  /* Title Section */
+  .policies-title-wrapper {
+    text-align: center;
+  }
+  
+  .policies-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .guidelines-highlight {
+    color: #e63946;
+  }
+  
+  /* Card Container */
+  .policies-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    height: -webkit-fill-available;
+  }
+  
+  /* Policy Cards */
+  .policy-card {
+  
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+  
+    max-width: 400px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .policy-icon {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .policy-heading {
+    color: #e63946;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .policy-list {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .policy-list-item {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 1024px) {
+    .policies-card-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .policies-card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

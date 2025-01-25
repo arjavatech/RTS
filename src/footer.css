@@ -1,0 +1,72 @@
+/* Footer Style  */
+.footer-style{
+    background-color: #FDF4F4 !important;
+  }
+  
+  .footer-input-sty{
+    width: 130%;
+  }
+
+  .footer-link-color{
+    color: #D4302B;
+  }
+  
+  /* Footer Styles */
+  .footer-style {
+    background-color: #f8f9fa; /* Light background color for contrast */
+    color: #343a40; /* Dark text for readability */
+    text-align: center;
+  }
+  
+  /* Input and Button */
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+  }
+  
+  .regis-btn {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-style {
+        padding: 1.5rem;
+    }
+  
+    .form-control {
+        width: 100%;
+    }
+  
+    .footer-input-sty{
+      width: 140% !important;
+    }
+    .regis-btn {
+        margin-top: 1rem;
+        width: 140%;
+    }
+  }
+
+  .footer-row {
+    margin-left: 10%;
+  }
+
+  /* Footer should always stick to the bottom */
+.footer {
+    margin-top: auto; /* Push footer to the bottom */
+  }
+
+  @media (max-width:2611px) and (min-width:1790px) {
+    .footer-input-sty{
+      margin-left: 50%;
+      width: 50% !important;
+    }
+  }
+
+  @media (max-width:1790px) and (min-width:1350px) {
+    .footer-input-sty{
+      margin-left: 30%;
+      width: 70% !important;
+    }
+  }

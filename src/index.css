@@ -1,68 +1,1885 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Outfit:wght@400;700&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat';
 }
 
-a {
+p {
+  font-family: 'Outfit';
+}
+
+.web-color {
+  color: #D4302B;
+}
+
+
+/* ___________________________________vaishu changed________________________________________ */
+.custom-container {
+  width: 90%; /* Or any percentage or pixel value you prefer */
+  max-width: 1327px; /* Set the maximum width you desire */
+  margin: 0 auto; /* Center align the container */
+}
+@media (max-width:767px) {
+  .card-styles {
+    width: 40% !important;
+    height: 100% !important;
+    margin-left: 30%;
+  }
+}
+
+.no-content{
+  text-align: center;
+}
+
+/* For screens smaller than 1327px */
+@media (max-width: 1323px) {
+  .sidebar {
+      display: block; /* Sidebar is hidden */
+  }
+}
+
+
+
+.curiculam-whole-card{
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.font-for-path{
+  font-size: 18px;
+}
+
+.num-circle {
+  background-color: #D4302B;
+  
+}
+
+/* For the tab view */
+.tab-view-image {
+  width: 94%;
+  height: 96%;
+  margin-left: 11%;
+  margin-top: -10%;
+}
+
+/* For the default view */
+.default-view-image {
+  width: 80%;
+  height: auto;
+  margin-left: 11%;
+  /* margin-top: 4%; */
+}
+@media (max-width:1115px){
+  .tab-view-image {
+    width: 70%;
+    height: 96%;
+    margin-left: 11%;
+    margin-top: 4.5%;
+  }
+}
+@media (max-width:767px){
+  .default-view-image {
+    width: 69%;
+  height: auto;
+  margin-left: 19%;
+  }
+}
+
+@media (max-width:575px){
+  .default-view-image {
+  width: 59%;
+  height: auto;
+  margin-left: 19%;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.973); /* Light, semi-transparent background */
+    border-radius: 50%; /* Circular shape */
+    padding: 12px; /* Adjust padding for smaller size */
+    background-size: 60%; /* Adjust icon size */
+    background-position: center; /* Center the icon */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Required to adjust position */
+    margin-bottom: 100%;
+    margin-top: 45%;
+    
+}
+
+.tamil-content {
+  background-color: #FDF4F4;
+  font-weight: bold;
+}
+
+.home-bg-img-head {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+
+.responsive-iframe {
+  border: solid 1px #777;
+  width: 90%; /* Default to 90% of the viewport width */
+  height: 600px;
+  margin: 0 auto; /* Center the iframe horizontally */
+  display: block; /* Ensure it behaves like a block element */
+  margin-top: 2%;
+}
+
+@media (min-width: 768px) {
+  .responsive-iframe {
+      width: 800px; /* Set a fixed width for larger screens */
+  }
+}
+
+#spanVal-colo{
+  color: #000;
+}
+
+
+
+/* 
+__________________________________________________________ */
+.about-us {
+  font-size: 18px;
+}
+
+.about-us2 {
+  font-size: 14px;
+}
+
+.acheive-img {
+  margin-top: 10% !important;
+}
+
+/* Styling for image navigation buttons */
+.image-navigation-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  /* Increased size */
+  width: 40px;
+  /* Increased width */
+  height: 60px;
+  /* Increased height */
+  background: none;
+  border: none;
+  color: rgb(224, 22, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center the arrow */
+  border-radius: 50%;
+  /* Make the button circular */
+  cursor: pointer;
+  /* Add cursor pointer for better UX */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+
+/* Position for the left arrow */
+#prevImageButton {
+  left: 10px;
+}
+
+/* Position for the right arrow */
+#nextImageButton {
+  right: 10px;
+}
+
+#head-of-card {
+  font-size: larger;
+  font-weight: 900;
+}
+
+.cont-of-card {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
 }
 
-body {
+.value-of-card {
+  font-weight: 600;
+}
+
+#cls-shedule {
+  font-family: 'Outfit';
+}
+
+#sub-heading {
+  font-family: 'Outfit';
+}
+
+.hover-card:hover {
+  background-color: red;
+  /* Change background color to red on hover */
+  color: white;
+  /* Change font color to white on hover */
+  transition: all 0.3s ease;
+  /* Add smooth transition effect */
+}
+
+.hover-card:hover h5,
+.hover-card:hover p {
+  color: white;
+  /* Ensure text inside headings and paragraphs also turns white */
+}
+
+#head-acad {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+
+#dott {
+  width: 7px !important;
+  margin-right: 1%;
+}
+
+/* header {
+  text-align: center;
+}
+
+header img {
+  height: 5rem;
+  width: 10rem;
+  object-fit: cover;
+} */
+
+/* header h1 {
+  margin: 0;
+  background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+} */
+
+/* header p {
+  margin: 0;
+  color: #8964b0;
+} */
+
+/* main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+} */
+
+/* #core-concepts {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+} */
+
+/* main h2 {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+} */
+
+/* #core-concepts ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+/* #core-concepts li {
+  width: 10rem;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#core-concepts li img {
+  height: 4rem;
+  width: 6rem;
+  object-fit: cover;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+#core-concepts li h3 {
+  margin: 0.5rem 0;
+}
+
+#core-concepts li p {
+} */
+
+/* #examples {
+  margin: 3rem auto;
+}
+
+#examples h2 {
+  text-align: left;
+}
+
+#examples menu {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+#examples menu button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #a18aba;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+#examples menu button:hover {
+  background-color: #1b082f;
+  color: #ebe7ef;
+}
+
+#examples menu button.active {
+  background-color: #7925d3;
+  color: #ebe7ef;
+} */
+
+/* #tab-content {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2f1d43;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#tab-content h3 {
+  margin: 0;
+}
+
+#tab-content code {
+} */
+
+/* .input-sty{
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 30px;
+} */
+
+/* .submitButton{
+  padding-top: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+  background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
+  border-radius: 20px;
+  margin-left: 270px;
+} */
+
+/* .success{
+  display: flex;
+  justify-content: center;
+} */
+
+/* .bg-sty{
+  background-image: url("./assets/congrats.gif") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  min-height: 80rem;
+  overflow: hidden;
+} */
+
+.card {
+  height: 110%;
+}
+.blog-card-style{
+  height: 100%;
+}
+
+/* Home  */
+/* home page bg-image inside heading  */
+.home-bg-img-head {
+  font-weight: bold;
+}
+
+@media (max-width:1102px) {
+  .home-bg-img-head {
+    font-weight: bold;
+    font-size: 220%;
+    margin-top: 7%;
   }
 }
+
+@media (max-width:940px) {
+  .home-bg-img-head {
+    font-weight: bold;
+    font-size: 190%;
+    margin-top: 14%;
+  }
+}
+
+@media (max-width:790px) {
+  .home-bg-img-head {
+    font-weight: bold;
+    font-size: 170%;
+    margin-top: 16%;
+  }
+}
+
+@media (max-width:730px) {
+  .home-bg-img-head {
+    font-size: 600%;
+    margin-top: 16%;
+  }
+}
+
+@media (max-width:631px) {
+  .home-bg-img-head {
+    font-size: 500%;
+    margin-top: 19%;
+  }
+
+  .home-bg-img-text {
+    font-size: 350% !important;
+  }
+}
+
+@media (max-width:550px) {
+  .home-bg-img-head {
+    font-size: 600%;
+    margin-top: 30%;
+  }
+}
+
+@media (max-width:519px) {
+  .home-bg-img-head {
+    font-size: 400%;
+    margin-top: 30%;
+  }
+}
+
+@media (max-width:420px) {
+  .home-bg-img-head {
+    margin-top: 50%;
+  }
+}
+
+@media (max-width:372px) {
+  .home-bg-img-head {
+    font-size: 400%;
+    margin-top: 60%;
+  }
+
+  .student-achive-image {
+    width: 100% !important;
+  }
+
+  .home-bg-img-text {
+    font-size: 40% !important;
+  }
+}
+
+/* ___________________________________________________________________________________________ */
+/* ABOUT  */
+
+/* .about{
+  background-color: #D4302B;
+} */
+
+/* .about h2 {
+  font-weight: bold;
+} */
+/* Card style  */
+.card-styles {
+  border: 3px solid #D4302B;
+  align-items: center;
+}
+
+/* Go to left side arrow  */
+.dashed-arrow {
+  position: relative;
+  border-top: 2px dashed #D4302B;
+  /* Dashed line */
+  margin-top: 130%;
+  /* Length of the line */
+}
+
+.dashed-arrow::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  /* Adjusts the position of the arrowhead */
+  right: 0;
+  /* Places the arrowhead at the end of the line */
+  border-width: 5px;
+  /* Size of the arrowhead */
+  border-style: solid;
+  border-color: #D4302B transparent transparent #D4302B;
+  /* Arrowhead color */
+  transform: rotate(130deg);
+  /* Rotates the arrowhead to point correctly */
+}
+
+/* Down arrow style  */
+.left-arrow {
+  position: relative;
+  border-left: 2px dashed #D4302B;
+  margin-top: 30px;
+  /* Dashed vertical line */
+  height: 100px;
+  /* Length of the dashed line */
+  width: 0;
+  /* Keep width 0 for a vertical line */
+  margin-left: 60%;
+  /* Center the arrow horizontally */
+}
+
+.left-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  /* Position the arrowhead at the bottom of the line */
+  top: 100px;
+  left: -9px;
+  /* Center the arrowhead horizontally */
+  border-width: 10px;
+  /* Size of the arrowhead */
+  border-style: solid;
+  border-color: #D4302B transparent transparent transparent;
+  /* Arrowhead colors */
+}
+
+/* Go to right side arrow  */
+.left-dashed-arrow {
+  position: relative;
+  border-top: 2px dashed #D4302B;
+  /* Dashed horizontal line */
+  width: 100px;
+  /* Length of the dashed line */
+  margin-top: 140%;
+}
+
+.left-dashed-arrow::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  /* Adjust position of the arrowhead */
+  left: 0;
+  /* Places the arrowhead at the start of the line */
+  border-width: 5px;
+  /* Size of the arrowhead */
+  border-style: solid;
+  border-color: transparent #D4302B #D4302B transparent;
+  /* Arrowhead color */
+  transform: rotate(-220deg);
+  /* Rotates the arrowhead to point left */
+}
+
+/* Affiliation section  */
+.fluid-section {
+  background-color: rgb(249, 220, 225);
+}
+
+@media (max-width:1115px) {
+  .span-val {
+    margin-right: 14%;
+  }
+}
+
+@media (max-width:575px) {
+  .span-val {
+    margin-right: 1%;
+  }
+
+  /* .student-achive-image{
+    width: 600px !important;
+  } */
+  .home-colum-image {
+    margin-left: 18% !important;
+  }
+}
+
+
+/* media query  */
+@media (max-width:991px) {
+  .card-styles {
+    width: 140% !important;
+  }
+
+  /* .card-row{
+    margin-left: 0% !important;
+  } */
+
+  .card-container {
+    max-width: 890px;
+  }
+
+  .left-dashed-arrow {
+    display: none;
+  }
+
+  .left-arrow {
+    display: none;
+  }
+
+  .dashed-arrow {
+    display: none;
+  }
+
+  .student-achivement-head {
+    font-size: 0.9rem;
+  }
+
+  .about-bg-img {
+    height: 20% !important;
+  }
+}
+
+
+
+/* Acedemic Iframe style  */
+@media (max-width:964px) {
+  .iframe-style {
+    width: 100%;
+  }
+}
+
+
+/* Student Sectionn  */
+
+
+/* Portal login section  */
+.portal-section {
+  background-color: #D4302B;
+}
+
+/* portal section login button  */
+.login-style {
+  background-color: white !important;
+  color: #D4302B;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Join us and show more show less button  */
+.login-style2 {
+  color: white;
+  background-color: #D4302B;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Parents section  */
+/* .parents-section{
+  background-color: #D4302B;
+} */
+
+/* Parents page */
+/* School timigs  */
+.school-timing {
+  padding-right: 20px;
+  border-right: 1px solid gray;
+}
+
+/* Home style  */
+
+.regis-btn {
+  font-weight: bold;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.regis-btn:hover {
+  background-color: #D4302B;
+}
+
+.tamil-content {
+  background-color: #FDF4F4;
+}
+
+
+@media (max-width:730px) {
+  .image-inside-content {
+    font-size: 4px !important;
+  }
+}
+
+@media (max-width:748px) {
+  .navbar-expand-sm .navbar-nav .nav-link {
+    font-size: 80% !important;
+  }
+}
+
+.link-sty {
+  text-decoration: none;
+  color: #D4302B;
+}
+
+.cards-images {
+  width: 100% !important;
+  /* Ensures image takes full width of the container */
+  height: 100% !important;
+  /* Ensures image height matches the container */
+  object-fit: cover !important;
+  /* Ensures image covers the container without distortion */
+  position: absolute !important;
+  /* Absolute position for image to fit properly inside card */
+  top: 0;
+  left: 0;
+}
+
+.sidebar ul li a {
+  font-family: 'Montserrat' !important;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  font-family: 'Montserrat' !important;
+}
+
+@media (max-width:575px) {
+  .num-circle {
+    margin: auto !important;
+  }
+
+  .home-bg-img-text {
+    font-size: 0.9rem !important;
+  }
+
+  .about-content {
+    text-align: justify;
+  }
+}
+
+@media (max-width:767px) {
+  .card-styles {
+    width: 80% !important;
+    margin-left: 13%;
+    max-height: 130% !important;
+  }
+
+  /* .card-styles:hover .cards-images{
+    display: none !important;
+  } */
+   
+  .cards-images {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: relative !important;
+  }
+
+  .image-with-text-container {
+    max-width: 990px;
+  }
+
+  .about-bg-img {
+    margin-top: 20% !important;
+    left: 17% !important;
+    width: 50% !important;
+    height: 80% !important;
+  }
+
+  .not-show-column-mobile {
+    display: none;
+  }
+
+  .show-change-column-mobile {
+    display: flex !important;
+  }
+
+  .tabView-colum1 {
+    display: none !important;
+  }
+
+  .tabView-colum2 {
+    display: none !important;
+  }
+}
+
+.show-change-column-mobile {
+  display: none;
+}
+
+.tabView-column-show {
+  display: none !important;
+}
+
+.about-bg-img {
+  position: absolute;
+  left: 35%;
+  z-index: 1;
+  width: 26%;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .about-bg-img {
+    height: 23% !important;
+    width: 60%;
+    /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%;
+    /* Adjust left position accordingly */
+  }
+}
+
+@media (max-width:1189px) {
+  .about-bg-img {
+    height: 16%;
+    width: 60%;
+    /* Adjust width to 50% on tablets or smaller screens */
+    left: 20%;
+    /* Adjust left position accordingly */
+  }
+
+  .blog-container {
+    max-width: 100% !important;
+  }
+}
+
+/* For screens smaller than 576px (mobile devices) */
+@media (max-width: 576px) {
+  .about-bg-img {
+    width: 80%;
+    /* Adjust width to 80% on mobile screens */
+    height: 20% !important;
+    left: 10%;
+    /* Adjust left position to center image */
+  }
+}
+
+.about-content {
+  position: relative;
+  z-index: 4;
+}
+
+.navbar-toggler {
+  background-color: #D4302B;
+}
+
+.num-circle {
+  background-color: #D4302B;
+}
+
+.nav-link {
+  font-size: 1.1rem !important;
+  font-family: 'Montserrat' !important;
+}
+
+/* Styling for the hover underline animation */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #D4302B;
+  transition: width 0.3s ease;
+  /* Smooth transition for the underline */
+  margin: 0 auto;
+  /* Center the underline */
+}
+
+/* Hover effect to expand the underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Styling for the active nav-link */
+.nav-link.active {
+  position: relative;
+  /* Ensure the pseudo-element aligns properly */
+  font-weight: bold;
+  color: #D4302B !important;
+}
+
+/* Add underline for active state to match hover effect */
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #D4302B;
+  margin: 0 auto;
+  /* Center the underline */
+}
+
+
+.bg-img-header {
+  background-color: #D4302B;
+  background-image: url('assets/heading bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+}
+
+.contact-person-style {
+  background-color: rgb(224, 219, 219);
+}
+
+.header-title {
+  color: white;
+  font-weight: bold;
+  font-size: 260%;
+}
+
+/* Table  */
+
+.schedule-container {
+  background-color: rgb(245, 231, 233);
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.schedule-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.schedule-container .highlight {
+  color: #e63946;
+  /* Red for "schedules" */
+}
+
+.schedule-table {
+  width: 100%;
+  border-style: hidden;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.schedule-table th {
+  /* background-color: #f8f9fa; Light grey */
+  font-weight: bold;
+  color: #000;
+}
+
+.schedule-table td p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on touch devices */
+}
+
+@media (max-width: 768px) {
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .schedule-container h1 {
+    font-size: 20px;
+  }
+
+  .schedule-table tbody td p {
+    margin: 2px 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 10px;
+  }
+
+  .schedule-container h1 {
+    font-size: 18px;
+  }
+
+  .schedule-table tbody td p {
+    font-size: 10px;
+  }
+}
+
+/* blog  */
+
+#headbg-blog {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #D4302B;
+  opacity: 0.9;
+  background-image: url("../images/headingbgContactUs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.footer-container-style {
+  background-color: #FDF4F4;
+  background-image: url('assets/heading bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+#head-blog {
+  position: absolute;
+  text-align: center;
+  margin-top: 5%;
+  color: aliceblue;
+
+}
+
+#news-span {
+  color: #D4302B;
+  text-align: center;
+}
+
+#school-news {
+  text-align: center;
+
+}
+
+/* #grad-img1 {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+} */
+
+/* .blog-card1 {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 80%;
+  text-align: center;
+  margin-left: 13%;
+
+} */
+
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.grad1-cont1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* #graddate1 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+} */
+
+#main-cont-id {
+  font-size: 1rem;
+  color: #333;
+  padding: 0 10px;
+  text-align: left;
+
+}
+
+#readmore-grad {
+  background-color: #D4302B;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+#viewmore-btn {
+  border: none;
+  background: none;
+  color: #D4302B;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#viewmore-btn:hover {
+  color: #c45252;
+}
+
+.viewmore {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  /* #grad1-cont1 {
+      font-size: 15px;
+      padding: 14px;
+      text-align: justify;
+  } */
+
+  /* .blog-card1 {
+      width: 100%;
+      margin-left: 0;
+  } */
+
+
+
+  #main-cont-id {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  #readmore-grad {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+/* contact  */
+
+#headbg {
+  width: 100%;
+  height: 100%;
+  background-color: #D4302B;
+  opacity: 0.9;
+  background-image: url("../images/headingbgContactUs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#text-head {
+  position: absolute;
+  text-align: center;
+  margin-top: 5%;
+  color: aliceblue;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff; /* Ensure header remains visible */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for better UI */
+  transition: top 0.3s ease-in-out;
+  border-bottom: 1px solid gray;
+}
+
+
+/* Default large logo */
+#logo.large-logo {
+  width: 150px; /* Adjust to your desired large size */
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Smaller logo when fixed */
+#logo.small-logo {
+  width: 80px; /* Adjust to your desired small size */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+#at-logo,
+#location-logo,
+#phone-logo {
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#gmail {
+  font-size: 1rem;
+  color: #555;
+}
+
+.map-img {
+  width: 97%;
+  /* margin-top: 11%; */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#name,
+#email,
+#message {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* #submit-button {
+  background-color: #D4302B;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+#submit-button:hover {
+  background-color: #cc0000 !important;
+} */
+
+@media (max-width: 890px) {
+  #text-head {
+    position: absolute;
+    text-align: center;
+    margin-top: 3%;
+    color: aliceblue;
+
+  }
+}
+
+@media (max-width: 620px) {
+  #text-head {
+    position: absolute;
+    text-align: center;
+    margin-top: 2%;
+    color: aliceblue;
+
+  }
+}
+
+@media (max-width: 464px) {
+  #text-head {
+    font-size: 160%;
+  }
+}
+
+@media (max-width: 360px) {
+  #text-head {
+    font-size: 120%;
+  }
+}
+
+.regis-btn {
+  background-color: #D4302B;
+}
+
+.footer-input-sty {
+  width: 100% !important;
+}
+
+@media (max-width:767px) {
+  .footer-row {
+    margin-right: 20%;
+    width: 70% !important;
+  }
+
+  .home-bg-img-text {
+    font-size: 1.2rem;
+  }
+
+  .blog-container {
+    max-width: 80% !important;
+  }
+
+  .right-section {
+    margin-top: 20% !important;
+  }
+
+  /* .img-fluid{
+    height: 10% !important;
+  } */
+}
+
+@media (max-width:1325px) {
+  .nav-link {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width:1099px) and (min-width:575px) {
+  .student-achive-image {
+    width: 200px !important;
+  }
+}
+
+@media (max-width:1199px) {
+
+  /* .footer-input-sty{
+    width: 110% !important;
+  } */
+  .student-row {
+    max-width: 1600px;
+  }
+
+  .home-colum-image {
+    display: inline !important;
+    width: 86% !important;
+    height: 30% !important;
+    margin-left: '10%';
+    width: 90%;
+    /* margin-right: 200% !important; */
+  }
+
+  .tabView-column-show {
+    display: flex !important;
+  }
+
+  .card-styles {
+    margin-right: 100%;
+    width: 130%;
+    height: 90%;
+  }
+
+  .dashed-arrow {
+    display: none;
+  }
+
+  .left-arrow {
+    display: none;
+  }
+
+  .left-dashed-arrow {
+    display: none;
+  }
+}
+
+
+
+
+.table-head-style {
+  font-size: 20px;
+}
+
+/* @media (max-width:767px) {
+ .footer-contain{
+  margin-right: 50%;
+ }
+ .footer-input-sty{
+  width: 400% !important;
+ }
+ .regis-btn{
+  width: 400% !important;
+ }
+ .bootom-footer{
+  margin-left: 90% !important;
+ }
+}
+
+@media (max-width:593px) {
+  .footer-contain{
+    margin-right: 75%;
+   }
+   .footer-input-sty{
+    width: 4000% !important;
+   }
+   .regis-btn{
+    width: 4000% !important;
+   }
+   .bootom-footer{
+    margin-left: 230% !important;
+   }
+}
+
+@media (max-width:556px) {
+  .footer-input-sty{
+    width: 6000% !important;
+  }
+  .regis-btn{
+    width: 6000% !important;
+  }
+}
+
+@media (max-width:536px) {
+  .footer-input-sty{
+    width: 10030% !important;
+  }
+  .regis-btn{
+    width: 10030% !important;
+  }
+}
+
+@media (max-width:526px) {
+  .footer-input-sty{
+    width: 20030% !important;
+  }
+  .regis-btn{
+    width: 20030% !important;
+  }
+} */
+
+
+
+.form-section {
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+}
+
+@media (max-width:2800px) and (min-width:1800px) {
+  .about-bg-img {
+    width: 10%;
+    left: 46%;
+    margin-top: 2%;
+  }
+}
+
+@media (max-width:1850px) {
+  .about-bg-img {
+    width: 16%;
+    left: 40%;
+    margin-top: 2%;
+  }
+}
+
+.right-alignment {
+  text-align: right !important;
+}
+
+.apply-gray {
+  color: gray;
+}
+
+.submit-button {
+  background-color: #D4302B;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.submit-button:hover {
+  background-color: #D4302B;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.card-hover-effect {
+  position: relative;
+  overflow: hidden;
+  /* Ensures the image doesn't overflow the card */
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  /* Initially hide the image */
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition */
+  z-index: -1;
+  /* Ensure the image stays behind the text */
+}
+
+.card-hover-effect:hover .hover-image {
+  opacity: 1;
+  /* Show the image on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.973);
+  /* Light, semi-transparent background */
+  border-radius: 50%;
+  /* Circular shape */
+  padding: 12px;
+  /* Adjust padding for smaller size */
+  background-size: 60%;
+  /* Adjust icon size */
+  background-position: center;
+  /* Center the icon */
+  background-repeat: no-repeat;
+  /* Prevent repeating the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  position: relative;
+  /* Required to adjust position */
+}
+
+.carousel-control-prev-icon {
+  background-image: url('./assets/prev.png');
+  /* Add the previous icon */
+}
+
+.carousel-control-next-icon {
+  background-image: url('./assets/next.png');
+  /* Add the next icon */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 40px;
+  /* Adjust the size of the clickable area */
+  width: 70px;
+  /* Adjust the size of the clickable area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 60%;
+  /* Move the controls slightly downward */
+  transform: translateY(-50%);
+  /* Maintain vertical centering */
+}
+
+/* .carousel-control-next, .carousel-control-prev {
+  opacity: 2  ;
+} */
+
+
+.footer-input-sty {
+  background-color: #F9E1E0;
+}
+
+.footer-input-sty::placeholder {
+  color: #D4302B;
+}
+
+
+/* Photo Gallary  */
+
+.photo-gallary-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  /* Optional: Adds rounded corners */
+}
+
+@media (max-width: 767px) {
+
+  /* Adjust styles for tablets and smaller screens */
+  .carousel-inner .row {
+    margin: 0;
+    /* Remove any extra margin for better alignment */
+  }
+
+  .photo-gallary-image {
+    width: 100%;
+    height: auto;
+    /* Ensures aspect ratio is maintained */
+  }
+}
+
+
+/* .center-alignement{
+  margin-left: 30%;
+} */
+
+
+/* Contact Form Style  */
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.dialog-header h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.dialog-body {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.dialog-footer {
+  margin-top: 20px;
+}
+
+.close-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+.right-section {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+@media (max-width:991px) {
+  .form-container {
+    max-width: 100% !important;
+  }
+
+  .curriculam-container {
+    max-width: 600% !important;
+  }
+}
+
+
+/* Read more page content style  */
+.text-justify {
+  text-align: justify;
+}
+
+.preStyle {
+  font-family: 'Outfit';
+  overflow-x: auto;
+  white-space: pre-wrap;
+  /* word-wrap: break-word; */
+  font-size: 18px;
+}
+
+/* Curriculam Card hover styles  */
+.curriculam-card:hover {
+  background-color: #D4302B;
+  color: white;
+  transition: ease-in-out;
+  transition-duration: .5s;
+  /* margin-bottom: 85%; */
+
+
+}
+
+.curriculam-card:hover .card-header {
+  background-color: #D4302B;
+  color: white;
+  transition: ease-in-out;
+  transition-duration: .5s;
+
+}
+
+.curriculam-card:hover .card-footer {
+  background-color: #D4302B;
+  color: white;
+  transition: ease-in-out;
+  transition-duration: .5s;
+}
+
+.curriculam-card:hover .curriculam-head {
+  color: white
+}
+
+.curriculam-card:hover .curriculam-sub-head {
+  color: white
+}
+
+.footer-icon-style{
+  font-size: 48px;
+}
+
+.blog-card1{
+  height: 100% !important;
+}
+
+@media (max-width:438px) {
+  .header-title{
+    font-size: 1.7rem;
+  }
+  .tamil-content{
+    font-size: 0.7rem !important;
+  }
+}
+@media (max-width:577px) {
+  .body-card-style{
+    display: none;
+  }
+  .curriculam-card{
+    height: 100% !important;
+  }
+  .tamil-content{
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width:526px) {
+  .read-more-image{
+    width: 50%;
+  }
+}
+
+@media (max-width:880px) {
+  .curriculam-container{
+    padding: 0% ;
+  }
+  .curriculam-card-container{
+    padding: 0% !important;
+  }
+}
+
+@media (max-width: 370px) {
+  .curriculam-card-container {
+      padding: 0; /* Remove extra padding for small screens */
+  }
+
+  .curriculam-card {
+      margin: 10px 0; /* Adjust the margins for cards */
+      padding: 15px; /* Reduce the padding to fit the content */
+  }
+
+  .curriculam-head {
+      font-size: 1.2rem; /* Make the heading font size smaller */
+  }
+
+  .curriculam-text {
+      font-size: 0.9rem; /* Reduce font size for the content */
+  }
+
+  .curriculam-sub-head {
+      font-size: 1rem; /* Adjust sub-heading font size */
+  }
+
+  .footer-card-style {
+      display: flex;
+      flex-direction: column; /* Stack the content in the footer */
+  }
+
+  .container .row {
+      flex-direction: column; /* Stack rows for better readability */
+  }
+
+  .curriculam-small-text-column {
+      width: 100%; /* Make each column take the full width */
+      margin-bottom: 10px; /* Add space between columns */
+      
+  }
+  
+  .curriculam-row{
+    display: inline;
+  }
+
+  .card-body {
+      padding: 0; /* Remove extra padding in the body */
+  }
+
+}
+
+.tab-view-image {
+  width: 94%;
+  height: 96%;
+  margin-left: 11%;
+  margin-top: -10%;
+}
+
+@media (max-width:1199px){
+.tab-view-image {
+  width: 75% !important;
+  height: 50%;
+  margin-left: 11%;
+  margin-top: 6% !important;
+}
+}
+
+.list-item-spacing {
+  margin-bottom: 1.5%; 
+}
+
+.dott-margin{
+  margin-bottom: 1.5% !important;
+}
+
+@media (max-width:1408px) {
+  .nav-link{
+    font-size: 0.8rem !important;
+  }
+}
+
+.read-more-btn{
+  background-color: #D4302B;
+  color: white;
+}
+
+.read-more-btn:hover{
+  background-color: #D4302B;
+  color: white;
+}
+
+
+
+/* Styles for screens with a max-width of 318px */
+@media (min-width: 320px)  and (max-width: 350px){
+  .about-bg-img {
+    width: 50% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: 8% !important;
+    margin-top: 200% !important;
+  }
+}
+@media (min-width: 350px)  and (max-width: 430px){
+  .about-bg-img {
+    width: 50% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: 8% !important;
+    margin-top: 100% !important;
+  }
+}
+@media (min-width: 430px)  and (max-width: 500px){
+  .about-bg-img {
+    width: 50% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: 8% !important;
+    margin-top: 70% !important;
+  }
+}
+@media (min-width: 500px)  and (max-width: 700px){
+  .about-bg-img {
+    width: 50% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: 8% !important;
+    margin-top: 40% !important;
+  }
+}
+@media  (min-width: 768px) and (max-width: 991px){
+  .about-bg-img {
+    width: 50% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: -17% !important;
+    margin-top: 20% !important;
+  }
+}
+@media  (min-width: 1024px) and (max-width: 1200px){
+  .about-bg-img {
+    width: 38% !important; /* Adjust width as needed */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-left: -10% !important;
+    margin-top: 10% !important;
+  }
+}
+
