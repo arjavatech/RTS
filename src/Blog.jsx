@@ -1,152 +1,143 @@
-// import bg2 from "./assets/heading bg.png";
-// import BlogCard from "./BlogCard";
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Header } from "./HomeHeader";
 import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
-import BlogContents from './blogContents.jsx'
-import Logo from "./assets/logo.png"; 
-import ReadMorePage from './ReadMorePage.jsx';
-import {firstContentCard} from './blogContents.jsx';
-import {secondContentCard} from './blogContents.jsx';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import BlogCard from './BlogCard';
+import Logo from "./assets/logo.png";
+
+// URLs for fetching event and news data
+const sheetUrls = {
+    events: "https://script.google.com/macros/s/AKfycby0RsNTM3YdU95YeTr0UlG-hfEnB8f6g3MFnZV9f0Ci1R7oIudYFoI4-P7cWKuIUHSu/exec?sheet=Events",
+    latestNews: "https://script.google.com/macros/s/AKfycby0RsNTM3YdU95YeTr0UlG-hfEnB8f6g3MFnZV9f0Ci1R7oIudYFoI4-P7cWKuIUHSu/exec?sheet=LatestNews"
+};
 
 export default function Blog() {
+    // State hooks for controlling 'show more' functionality
+    const [showMore, setShowMore] = useState(false);
+    const [showMore2, setShowMore2] = useState(false);
 
+    // State hooks for storing event and news data
+    const [storedEvents, setStoredEvents] = useState([]);
+    const [storedNews, setStoredNews] = useState([]);
+
+    // Initialize AOS (Animate on Scroll) on component mount
     useEffect(() => {
-              AOS.init({
-                  duration: 1000, 
-                  easing: 'ease-out', 
-                  once: false,
-              });
-          }, []);
-    
-    const [showContent, setShowContent] = useState(false);
-    const [showContent2, setShowContent2] = useState(false);
-    const [showContent3, setShowContent3] = useState(false);
-    const [showContent4, setShowContent4] = useState(false);
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-out', // Easing function
+            once: false, // Animation should repeat on scroll
+        });
+        window.scrollTo(0, 0); // Scroll to top when the page loads
+    }, []);
 
-
-    const handleClick = () => {
-        setShowContent(true);
+    // Fetch data from provided URL and update the respective state
+    const fetchData = async (url, setter) => {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (Array.isArray(data)) {
+                // Sort data by date in descending order (most recent first)
+                setter(data.sort((a, b) => new Date(b.Date) - new Date(a.Date)));
+            } else {
+                throw new Error("Invalid data format");
+            }
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
     };
 
-    const handleClick2 = () => {
-        setShowContent2(true);
-    };
+    // Fetch events and news data on component mount
+    useEffect(() => {
+        fetchData(sheetUrls.events, setStoredEvents);
+        fetchData(sheetUrls.latestNews, setStoredNews);
+    }, []);
 
-    const handleClick3 = () => {
-        setShowContent2(false);
-    };
+    // Toggle 'show more' functionality for events and news
+    const toggleShowMore = () => setShowMore(!showMore);
+    const toggleShowMore2 = () => setShowMore2(!showMore2);
 
-    const handleClick4 = () => {
-        setShowContent(false);
-    };
+    // Determine which cards to display based on the 'show more' state
+    const displayedCards = showMore ? storedEvents : storedEvents.slice(0, 3);
+    const displayedCards2 = showMore2 ? storedNews : storedNews.slice(0, 3);
 
     return (
-        <div data-aos="fade-up">
+        <div className="about-us">
+            {/* Render Header and HomeHeader components */}
             <HomeHeader />
             <Header headVal={'Blog & Events'} />
-            <div className="container blog-container mt-4 text-dark fs-3">
-                <h2 className='text-center m-4'><b>School <span className='web-color'>News</span></b></h2>
-                <div className="row g-3">
-                    <h2 className='no-content'>No content to display</h2>
-                   
+            
+            {/* Section for displaying school news   (temporarly hided) */}
+            {/* <h2 className='text-center mt-5 mb-5'><b>School <span className='web-color'>News</span></b></h2>
+            <div className="blog-container mt-5 text-dark mb-5 fs-3" data-aos="fade-up">
+                <div className="row g-3 blog-card" data-aos="fade-up">
+                    {displayedCards2.map((card, index) => (
+                        <div className="col-md-4" key={index}>
+                            <div className="blog-card1">
+                                <BlogCard
+                                    gradimg={Logo} // Image for the card
+                                    author={card.EventOrganizer} // Author of the event/news
+                                    blogimgid={"grad-img" + (index + 1)} // Unique ID for the image
+                                    h1cont={card.Title} // Title of the event/news
+                                    h1id={"grad" + (index + 1) + "-cont1"} // Unique ID for the title
+                                    graddate={card.Date} // Date of the event/news
+                                    dateid={"graddate" + (index + 1)} // Unique ID for the date
+                                    cardType={"LatestNews"} // Type of the card (for styling)
+                                    maincont={card.ShortDescription} // Short description of the event/news
+                                    excescont={card.DetailDescription} // Full description of the event/news
+                                    maincontid={"main-cont-id"} // ID for the main content
+                                    btnid={"readmore-grad" + (index + 1)} // Unique ID for the 'Read More' button
+                                    readContentFullDetails={card} // Full details for the 'Read More' button
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div> */}
+            {/* Toggle between showing more or less news */}
+            {/* <div className="text-center m-3">
+                <h2 className="text-decoration-underline fs-5 pt-2 pb-2 mb-5 web-color" onClick={toggleShowMore2}>
+                    {showMore2 ? 'View Less' : 'View More'}
+                </h2>
+            </div> */}
+
+            {/* Section for displaying event updates */}
+            <h2 className='text-center mt-5 mb-5'><b>Event <span className='web-color'>Updates</span></b></h2>
+            <div className="blog-container mt-5 text-dark mb-5 fs-3" data-aos="fade-up">
+                <div className="row g-3 blog-card" data-aos="fade-up">
+                    {/* Map over the stored events data and display each item as a BlogCard */}
+                    {displayedCards.map((card, index) => (
+                        <div className="col-md-4" key={index}>
+                            <div className="blog-card1">
+                                <BlogCard
+                                    gradimg={Logo} // Image for the card
+                                    author={card.EventOrganizer} // Author of the event
+                                    blogimgid={"grad-img" + (index + 1)} // Unique ID for the image
+                                    h1cont={card.Title} // Title of the event
+                                    h1id={"grad" + (index + 1) + "-cont1"} // Unique ID for the title
+                                    graddate={card.Date} // Date of the event
+                                    cardType={"Events"} // Type of the card (for styling)
+                                    dateid={"graddate" + (index + 1)} // Unique ID for the date
+                                    maincont={card.ShortDescription} // Short description of the event
+                                    excescont={card.DetailDescription} // Full description of the event
+                                    maincontid={"main-cont-id"} // ID for the main content
+                                    btnid={"readmore-grad" + (index + 1)} // Unique ID for the 'Read More' button
+                                    readContentFullDetails={card} // Full details for the 'Read More' button
+                                />
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-
-           
-            <div className="container blog-container mt-4 text-dark mb-5 fs-3">
-                <h2 className='text-center mb-5'><b>Event <span className='web-color'>Updates</span></b></h2>
-
-                <div className="row g-3">
-                    <div className="col-md-4">
-                        <div class="blog-card1">
-                        <BlogCard gradimg={Logo} blogimgid={"grad-img1"}
-                                    h1cont={"Tamil Talent Extravaganza"} h1id={"grad1-cont1"}
-                                    graddate={"18.01.2025"} dateid={"graddate1"}
-                                    maincont={"A Celebration of Creativity, Language, and Culture We are excited to announce the Tamil Talent Extravaganza, a series of competitions designed to nurture and celebrate the artistic and intellectual abilities of our students across all grades. "}
-                                    excescont={"This includes earning the required number of credits."}
-                                    maincontid={"main-cont-id"} btnid={"readmore-grad"} 
-                                    readContentFullDetails={secondContentCard}
-                                    />
-                        </div>
-                    </div>
-
-                    <div className="col-md-4">
-                        <div class="blog-card1">
-                        <BlogCard
-                                gradimg={Logo}
-                                blogimgid={"x"}
-                                h1cont={"Pongal Celebration – A Vibrant Cultural Festivity"}
-                                h1id={"grad1-cont1"}
-                                graddate={"14.01.2025"}
-                                dateid={"graddate1"}
-                                maincont={"Redmond Tamil School proudly hosts its annual Pongal Celebration, a joyous event that unites the community in honoring Tamil heritage. "}
-                                excescont={"This includes earning the required number of credits."}
-                                maincontid={"main-cont-id"}
-                                btnid={"readmore-grad"}
-                                readContentFullDetails = {firstContentCard}
-                            />
-                        </div>
-                    </div>
-
-                   
-                </div>
+            {/* Toggle between showing more or less events */}
+            <div className="text-center m-3">
+                <h2 className="text-decoration-underline fs-5 pt-2 pb-2 mb-5 web-color" onClick={toggleShowMore}>
+                    {showMore ? 'View Less' : 'View More'}
+                </h2>
             </div>
+            {/* Render Footer */}
             <FooterSection />
-
-        </div>
-    )
-}
-
-
-export function BlogCard({ gradimg, blogimgid, h1cont, h1id, graddate, maincont, dateid, maincontid, btnid, excescont, readContentFullDetails, title }) {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const navigate = useNavigate();
-
-    const toggleContent = () => {
-        navigate("/Read-more", { 
-            state: { 
-                cardData: readContentFullDetails,  // Detailed content to show
-                title: h1cont  // Title of the clicked card (heading)
-            }
-        });
-    };
-    
-
-    return (
-        <div className="card blog-card-style">
-            <img src={gradimg} alt="grad-img" className="card-img-top img-fluid" style={{width: '90%', height: '60%'}} />
-            <div className="card-body">
-                <h4 id="grad1-cont1" className="blog-card-header text-center"><b>{h1cont}</b></h4>
-                <p className="text-muted text-center">{graddate}</p>
-                <p id="main-cont-id">
-                    {isExpanded ? `${maincont} ${excescont}` : maincont}
-                </p>
-                <div className="text-center m-3">
-                    <button 
-                        className="login-style2 fs-6 pt-2 pb-2"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title={readContentFullDetails === undefined ? "No datas available" : ""}
-                        style={readContentFullDetails === undefined ? {backgroundColor : 'gray'} : {}}
-                        onClick={() => {
-                            toggleContent(); // Navigate to the desired page
-                            setTimeout(() => {
-                                window.scrollTo(0, 0); 
-                            }, 0); // Small delay to ensure navigation is complete
-                        }} 
-                        disabled={readContentFullDetails === undefined}>
-                        <b>Read More</b>
-                    </button>
-                </div>
-            </div>
         </div>
     );
 }

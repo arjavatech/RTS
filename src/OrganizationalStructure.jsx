@@ -1,13 +1,26 @@
 import React from "react";
 import "./styles/Organisation.css";
-
+/**
+ * OrganizationalStructure Component
+ * 
+ * Displays the organizational structure of the institution in a collapsible format.
+ * Features:
+ * - Expandable sections for detailed information
+ * - Numbered sections with visual hierarchy
+ * - Arrow indicators between sections
+ */
 function OrganizationalStructure() {
+  // State to track which section is expanded
   const [expandedSection, setExpandedSection] = React.useState(null);
-
+/**
+   * Toggles the expanded state of a section
+   * @param {string} sectionNumber - The number of the section to toggle
+   */
   const handleToggle = (sectionNumber) => {
     setExpandedSection(expandedSection === sectionNumber ? null : sectionNumber);
   };
-
+  
+  // Data for organizational sections
   const sections = [
     {
       number: "1",
@@ -90,6 +103,7 @@ function OrganizationalStructure() {
   return (
     <div className="org-outer-wrapper">
       <div className="org-wrapper">
+        {/* Section Title */}
         <h2 className="org-title">
           Organizational <span className="org-title-highlight">Structure</span>
         </h2>
@@ -105,6 +119,7 @@ function OrganizationalStructure() {
 
               <div className="org-details-column">{section.details}</div>
             </div>
+              {/* Arrow Separator (except for last section) */}
             {index < sections.length - 1 && (
               <div className="org-arrow-container">
                 <div className="org-arrow-line"></div>

@@ -9,7 +9,7 @@ export default function App() {
     return (
         <div className="about-us">
             <HomeHeader />
-            <HomeBody />
+            {/* <HomeBody /> */}
             <div id="footer">
                 <HomeFooter facebook={facebook} instagram={instagram} />
             </div>

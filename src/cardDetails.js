@@ -1,8 +1,9 @@
-import classRoom from './assets/classroom.jpg';
+
 import mission from './assets/mission.jpg';
 import vision from './assets/vision.jpg';
 import photo from './assets/photo.jpg';
 import values from './assets/values.jpg';
+import tamilAcedmyImage from './assets/tamilAcedemyImage.png'
 import imageGal1 from "./assets/imageGal1.jpeg";
 import imageGal2 from "./assets/imageGal2.jpeg";
 import imageGal3 from "./assets/imageGal3.jpeg";
@@ -18,6 +19,7 @@ import imageGal12 from "./assets/imageGal12.jpeg";
 import imageGal13 from "./assets/imageGal13.jpeg";
 import imageGal14 from "./assets/imageGal14.jpeg";
 import HomeFirstImg from "./assets/homeFirstImg.jpg";
+
 // Importing images for each person
 import BhagyaImage from './TeacherVolunteer/Bhagya.jpeg';
 import KannanImage from './TeacherVolunteer/Kannan.png';
@@ -34,7 +36,7 @@ import MuraliImage from './TeacherVolunteer/Murali.jpeg';
 import PriyalakshmiImage from './TeacherVolunteer/Priyalakshmi.png';
 
 
-
+// Year card(School Histroy) details in About us
 let cardsInfo = [
     {
         heading: "School History",
@@ -68,23 +70,24 @@ let cardsInfo = [
     }
 ]
 
+// Mission,Vission,Values deatils and Contents
 export let imageWithContent = [
     {
         imageValue: mission,
-        headValue: "Our Mission",
-        contentValue: ["As a non-profit organization, we aim to make Tamil education accessible to all, instilling a lifelong connection to the Tamil language and culture in our students."]
+        headValue: "Mission",
+        contentValue: [` "Redmond Tamil School (RTS) was established with the primary objective of teaching Tamil language and culture to children in the Seattle area. As an extension of Tamil education, RTS also fosters cultural activities such as music, dance, drama, and other art forms rooted in Tamil traditions. "`]
     },
     {
         imageValue: vision,
-        headValue: "CORE AREA OF FOCUS",
-        contentValue: ["Building foundational and advanced proficiency in Tamil through interactive and structured lessons",
-            "Integrating lessons on Tamil heritage, literature, and traditions to create a holistic learning experience.",
-            "Encouraging students to excel in academics through periodic evaluations and continuous feedback."
+        headValue: "Vision",
+        contentValue: [` "RTS aims to: Deliver a high-quality, consistent learning environment for children.Provide continuous learning opportunities that nurture their knowledge of Tamil language and culture over the years" `
+
+            
         ]
     },
     {
         imageValue: values,
-        headValue: "OUR OBJECTIVES",
+        headValue: "Values",
         subHead: "Students who successfully complete the final year will:",
         contentValue: ["Converse with each other in Tamil and exchange ideas without hesitation.",
             "Read, understand and write flawlessly Tamil.",
@@ -96,13 +99,15 @@ export let imageWithContent = [
     }
 ];
 
+// Accreditation and Affiliation  images
 export let imageCardValues = [
-    vision,
-    mission,
-    classRoom,
-    photo
+    tamilAcedmyImage,
+    tamilAcedmyImage,
+    tamilAcedmyImage,
+    tamilAcedmyImage
 ];
 
+// Teacher Volunteers  deatils 
 export let admissionImagesWithDetails = [
     {
         imagePath: BhagyaImage,
@@ -243,18 +248,13 @@ export let studentImageAndContent = [
 
 
 export let schoolTimings = [
-    "Morning assembly begins promptly at 8:30 AM, setting a positive tone for the day.",
-    "Classes commence at 8:45 AM, with engaging lessons and interactive sessions.",
-    "Students enjoy a refreshing break mid-morning to relax and recharge.",
-    "Lunch is served from 12:30 PM to 1:15 PM in a calm and friendly environment.",
-    "Afternoon classes resume with focus and enthusiasm, continuing until 3:30 PM.",
-    "After-school activities, including sports and arts, are held from 3:45 PM.",
-    "Saturdays are reserved for special workshops and parent-teacher meetings.",
-    "The school office is open Monday through Friday from 8:00 AM to 4:00 PM.",
-    "Lunch is served from 12:30 PM to 1:15 PM in a calm and friendly environment."
+    "When:Sundays, 10:00 AM – 11:30 AM for Grades PreK–4 (with an additional 30-minute enrichment session for Grades 5–8).",
+    "Duration:Classes run from the first week of September to the first or second week of June, aligned with the Lake Washington School District calendar.",
+    
+   
 ];
 
-
+// Administrative Contacts
 export let commuincationProtocalsValues = [
     {
         emailValue: "john.doe@example.com",
@@ -282,6 +282,7 @@ export let commuincationProtocalsValues = [
     }
 ];
 
+// Library Information
 export let libraryInformation = [
     {
         heading: "Welcome to our vibrant and comprehensive library, a cherished resource for our community! Managed and maintained by our dedicated RTS volunteers, our library boasts an extensive collection of over 1,000 titles, serving more than 450 students and their families.",
@@ -300,34 +301,7 @@ export let libraryInformation = [
     }
 ]
 
-
-// export const curriculamDetails = [
-//     {
-//         heading: "MAZHALAI-1 (PRESCHOOL-1)",
-//         content: "Learn basic Tamil words and sentences with correct pronunciation, focusing on topics like family, colors, and animals. Build a strong foundation through simple vocabulary and meanings.",
-//         year: "3 years",
-//         age: "Age",
-//         yesOrNo: "No",
-//         evalution: "Evaluation",
-//     },
-//     {
-//         heading: "MAZHALAI-2 (PRESCHOOL-2)",
-//         content: "Inspire curiosity by teaching kids basic Tamil words like shapes, animals, and colors. Using actions, pictures, and games to ensure correct pronunciation and understanding.",
-//         year: "4 years",
-//         age: "Age",
-//         yesOrNo: "No",
-//         evalution: "Evaluation",
-//     },
-//     {
-//         heading: "KINDERGARTEN",
-//         content: "Teaching children simple Tamil through stories, games, and interactive tools to help them learn new words, sentences, and grammar. Focusing on writing and reading Tamil vowels, consonants, and combinations, with an emphasis on correct pronunciation, sound distinction, and grammatical rules.",
-//         year: "5 years",
-//         age: "Age",
-//         yesOrNo: "No",
-//         evalution: "Evaluation",
-//     },
-// ];
-
+// Curriculum overview  details  of BASIC_LEVEL,INTERMEDIATE_LEVEL and ADVANCE_LEVEL
 export const BASIC_LEVEL = [
     {
         heading: "MAZHALAI-1 (PRESCHOOL-1)",
@@ -398,7 +372,7 @@ export const ADVANCE_LEVEL = [
     },
 ];
 
-
+// Assessment system  points
 export let AssestmentSystemPoints = [
     "RTS assessment is based on ITA guidelines.",
     "Current ITA students must score 95% in monthly tests and projects during the year in their current grade.",
@@ -424,6 +398,7 @@ export let classSchedulePoints = [
     "Join us at RTS in fostering the next generation of Tamil speakers and cultural ambassadors, explore the Tamil language and culture in a vibrant, supportive environment!"
 ]
 
+// Assessment Table
 export let assesMentTable = [
     {
       heading: [

@@ -61,15 +61,16 @@ function PoliciesAndGuidelines() {
   ];
 
   return (
-    <div className="policies-and-guidelines-wrapper" data-aos="fade-up">
+    <div className="policies-and-guidelines-wrapper " data-aos="fade-up">
       {/* Title Section */}
       <div className="policies-title-wrapper">
-        <h1 className="policies-title">
+        <h1 className="policies-title mt-5">
           Policies <span className="guidelines-highlight">and Guidelines</span>
         </h1>
       </div>
+      {/*
 
-      {/* Cards Section */}
+      {/*  Policy Cards Grid  */}
       <div className="policies-card-container">
         {policies.map((policy, index) => (
           <div key={index} className={`policy-card policy-card-${index}`}>

@@ -12,6 +12,12 @@ body {
   align-items: center;
   gap: 6rem;
   padding: 0rem;
+
+}
+.margin-space
+{
+  margin-top: 3rem;
+
 }
 
 /* Timeline Row */
@@ -67,15 +73,11 @@ body {
 }
 
 /* Hide content on hover */
-.timeline-box:hover h2,
-.timeline-box:hover h3,
-.timeline-box:hover h4,
-.timeline-box:hover p {
-  opacity: 0; /* Hide text content */
-  transition: opacity 0.3s ease; /* Smooth transition for hiding content */
+
+
+.contents{
+  margin-top: 20px;
 }
-
-
 .school-history {
   background-color: #fff;
   border: 2px solid #d63031;
