@@ -102,9 +102,7 @@ export let imageWithContent = [
 // Accreditation and Affiliation  images
 export let imageCardValues = [
     tamilAcedmyImage,
-    tamilAcedmyImage,
-    tamilAcedmyImage,
-    tamilAcedmyImage
+    
 ];
 
 // Teacher Volunteers  deatils 

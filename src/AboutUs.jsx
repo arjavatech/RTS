@@ -45,7 +45,7 @@ function AboutUs() {
       <div className="container-fluid mt-6 p-3 text-dark fluid-section mb-5 margin-spaces ">
         <h2 className="text-center mb-5 mt-5" data-aos="fade-up"><b>Accreditation and <span className="web-color"> Affiliation</span></b></h2>
         <div className="container" data-aos="fade-up">
-          <div className="row mb-5">
+          <div className="row mb-5  d-flex justify-content-center">
              {/* Mapping over imageCardValues to display accreditation images */}
             {imageCardValues.map((item, index) => (
               <ImageCol imageLink={item} />

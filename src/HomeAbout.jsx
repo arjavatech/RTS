@@ -1,16 +1,30 @@
 import React from "react";
  // Update with your actual image path
  // Import custom CSS for styling
+ import { Link } from "react-router-dom";
 import aboutUsBG from './assets/about us bg.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const AboutUs = () => {
+     useEffect(() => {
+                AOS.init({
+                    duration: 1000, 
+                    easing: 'ease-out', 
+                    once: false,
+                });
+                window.scrollTo(0, 0);
+            }, []);
   return (
-    <section className="position-relative text-center py-5 container">
+    <section className="position-relative text-center py-5 container" data-aos="fade-up">
       {/* Background Image */}
       <img
         src={aboutUsBG}
         alt="Background"
-        className="position-absolute top-50 start-50 translate-middle opacity-1.25"
-        
+        className="position-absolute  start-50 translate-middle opacity-1.25"
+        style={{ top: "53%",
+                
+         }}
       />
 
       {/* Title */}
@@ -27,9 +41,7 @@ const AboutUs = () => {
                    
 
       {/* "Know More" Button */}
-      <a href="#" className="text-danger fw-semibold position-relative mt-3 d-inline-block">
-        Know More
-      </a>
+      <Link to="/About-Us" className="web-color mt-3" onClick={() => window.scrollTo(0, 0)}>Know More</Link>
     </section>
   );
 };

@@ -81,11 +81,7 @@ export default function ContactUs() {
                 <div className="row g-5">
                     {/* Left Section: Contact Details */}
                     <div className="col-xl-6 col-md-6">
-                        <p>
-                            Degree or diploma from a school, college, or university. This includes
-                            earning the required number of credits, taking all necessary courses,
-                            and completing any other requirements
-                        </p>
+    
                         <ul className="list-unstyled">
                             <li className="mb-3">
                                 <img src={atLogo} alt="at-logo" id="at-logo" />
