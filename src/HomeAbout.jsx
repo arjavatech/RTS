@@ -22,9 +22,7 @@ const AboutUs = () => {
         src={aboutUsBG}
         alt="Background"
         className="position-absolute  start-50 translate-middle opacity-1.25"
-        style={{ top: "53%",
-                
-         }}
+        style={{ top: "53%" }}
       />
 
       {/* Title */}

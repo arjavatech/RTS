@@ -32,7 +32,7 @@ function Volunteer() {
                         target="_blank" rel="noopener noreferrer" className="link-sty">       
                         <button className="login-style2 fs-6 pt-2 pb-2 mb-2 mt-4"><b>Join Us</b></button></a>
                     </div>
-                {/* ADMINISTRATION TEAM  */}
+                {/* ADMINISTRATION TEAM  ---temporarly removed*/}
                 {/* <div className="text-center mt-5 mb-3">
                     <h2><b>Volunteer <span className='web-color'> Teams</span></b></h2>
                 </div>

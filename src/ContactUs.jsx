@@ -25,21 +25,6 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // if (!name) {
-        //     setPopUpMessage("Please enter your name.");
-        //     return;
-        // }
-
-        // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // if (!email || !emailPattern.test(email)) {
-        //     setPopUpMessage("Please enter a valid email.");
-        //     return;
-        // }
-
-        // if (!message) {
-        //     setPopUpMessage("Please enter your message.");
-        //     return;
-        // }
 
         const data = { name, email, message };
 
@@ -158,23 +143,6 @@ export default function ContactUs() {
                     </div>
                 </div>
             </div>
-
-            {/* Pop-up Message */}
-            {/* {popUpMessage && (
-                <div className="dialog-overlay">
-                    <div className="dialog-box">
-                        <div className="dialog-header">
-                            <h4>Message</h4>
-                        </div>
-                        <div className="dialog-body">
-                            <p>{popUpMessage}</p>
-                        </div>
-                        <div className="dialog-footer">
-                            <button onClick={() => setPopUpMessage('')} className="close-btn">Close</button>
-                        </div>
-                    </div>
-                </div>
-            )} */}
             <FooterSection />
         </div>
     );
