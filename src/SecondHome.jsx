@@ -112,43 +112,42 @@ function SecondHome() {
                 {/* temporaliy removed need in future  -(School News) */}
                 <div className="row" data-aos="fade-up">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails spanVal={''} heading={'LatestNews '} checkTrue={false}
-                            Details={numWithText}
-                        />
+                        <CardWithContentDetails  spanVal={'Latest '} heading={' LatestNews '} checkTrue={false}
+                        Details={numWithText}
+                         />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none ">
                         <ShowImages imagePathLink={EventPage} isTabView={false} />
                     </div>
                 </div>
-                <div className="row tabView-column-show" data-aos="fade-up">
+                <div className="row tabView-column-show mt-5 py-5" data-aos="fade-up">
                     <div className="col-md-6 tabView-colum1 ">
                         <ShowImages imagePathLink={EventPage} />
                     </div>
                     <div className="col-md-6 tabView-colum2 ">
                         <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
-                </div>  
+                </div>
 
                 {/* Event Section */}
-                <div className="row mb-5 not-show-column-mobile mt-5 event" data-aos="fade-up">
-                    <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex  acheive-img">
+                <div className="row mb-5 not-show-column-mobile" data-aos="fade-up">
+                    <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none acheive-img">
                         <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
-                    <div className="col-xl-6 col-md-12 col-sm-12 mt-6">
-                        <CardWithContentDetails heading={'Events'} checkTrue={true}
-                            Details={numWithText2}  cardtype={"Events"}
-                        />
+                    <div className="col-xl-6 col-md-12 col-sm-12 mt-3">
+                        <CardWithContentDetails  heading={'Events'} checkTrue={true}
+                        Details={numWithText2} cardtype={"Events"}
+                         />
                     </div>
                 </div>
-                {/* Event Section for Mobile View */}
-                <div className="row mb-5 show-change-column-mobile" data-aos="fade-up">
+                <div className="row mb-5 show-change-column-mobile " data-aos="fade-up">
                     <div className="col-xl-6 col-md-12 col-sm-12">
-                        <CardWithContentDetails link={'Events'} spanVal={'Events'} checkTrue={true}
-                            Details={numWithText2}  cardtype={"Events"}
-                        />
+                        <CardWithContentDetails link={'Events'} heading={'Events'} spanVal={'dolor sit amet, consectetur'} checkTrue={true}
+                        Details={numWithText2} cardtype={"Events"}
+                         />
                     </div>
                     <div className="col-xl-6 col-md-12 col-sm-12 d-xl-flex d-md-none acheive-img">
-                        <ShowImages imagePathLink={achiveMentImage} />
+                        <ShowImages imagePathLink={achiveMentImage} isTabView={true} />
                     </div>
                 </div>
             </div>
@@ -166,7 +165,7 @@ function ShowImages({ imagePathLink, isTabView }) {
             <img
                 src={imagePathLink}
                 alt=""
-                className={isTabView ? "tab-view-image" : "default-view-image"}
+                className={ "default-view-image"}
             />
         </div>
     );

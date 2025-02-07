@@ -6,6 +6,7 @@ import { FooterSection } from "./App";
 import HomeHeader from "./HomeHeader";
 import BlogCard from './BlogCard';
 import Logo from "./assets/logo.png";
+import { truncateText } from './CardWithContentDetails';
 
 // URLs for fetching event and news data
 const sheetUrls = {
@@ -14,6 +15,7 @@ const sheetUrls = {
 };
 
 export default function Blog() {
+    let isblog=true;
     // State hooks for controlling 'show more' functionality
     const [showMore, setShowMore] = useState(false);
     const [showMore2, setShowMore2] = useState(false);
@@ -69,7 +71,7 @@ export default function Blog() {
             <Header headVal={'Blog & Events'} />
             
             {/* Section for displaying school news   (temporarly hided) */}
-            {/* <h2 className='text-center mt-5 mb-5'><b>School <span className='web-color'>News</span></b></h2>
+            <h2 className='text-center mt-5 mb-5'><b>School <span className='web-color'>News</span></b></h2>
             <div className="blog-container mt-5 text-dark mb-5 fs-3" data-aos="fade-up">
                 <div className="row g-3 blog-card" data-aos="fade-up">
                     {displayedCards2.map((card, index) => (
@@ -84,7 +86,7 @@ export default function Blog() {
                                     graddate={card.Date} // Date of the event/news
                                     dateid={"graddate" + (index + 1)} // Unique ID for the date
                                     cardType={"LatestNews"} // Type of the card (for styling)
-                                    maincont={card.ShortDescription} // Short description of the event/news
+                                    maincont={truncateText(card.DetailDescription,isblog)} // Short description of the event/news
                                     excescont={card.DetailDescription} // Full description of the event/news
                                     maincontid={"main-cont-id"} // ID for the main content
                                     btnid={"readmore-grad" + (index + 1)} // Unique ID for the 'Read More' button
@@ -94,13 +96,13 @@ export default function Blog() {
                         </div>
                     ))}
                 </div>
-            </div> */}
+            </div>
             {/* Toggle between showing more or less news */}
-            {/* <div className="text-center m-3">
+            <div className="text-center m-3">
                 <h2 className="text-decoration-underline fs-5 pt-2 pb-2 mb-5 web-color" onClick={toggleShowMore2}>
                     {showMore2 ? 'View Less' : 'View More'}
                 </h2>
-            </div> */}
+            </div>
 
             {/* Section for displaying event updates */}
             <h2 className='text-center mt-5 mb-5'><b>Event <span className='web-color'>Updates</span></b></h2>
@@ -111,6 +113,7 @@ export default function Blog() {
                         <div className="col-md-4" key={index}>
                             <div className="blog-card1">
                                 <BlogCard
+                                
                                     gradimg={Logo} // Image for the card
                                     author={card.EventOrganizer} // Author of the event
                                     blogimgid={"grad-img" + (index + 1)} // Unique ID for the image
@@ -119,7 +122,7 @@ export default function Blog() {
                                     graddate={card.Date} // Date of the event
                                     cardType={"Events"} // Type of the card (for styling)
                                     dateid={"graddate" + (index + 1)} // Unique ID for the date
-                                    maincont={card.ShortDescription} // Short description of the event
+                                    maincont={truncateText(card.DetailDescription,isblog)} // Short description of the event
                                     excescont={card.DetailDescription} // Full description of the event
                                     maincontid={"main-cont-id"} // ID for the main content
                                     btnid={"readmore-grad" + (index + 1)} // Unique ID for the 'Read More' button

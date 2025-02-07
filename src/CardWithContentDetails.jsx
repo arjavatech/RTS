@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { formatDateToOrdinal2 } from './ReadMorePage';
 
 function CardWithContentDetails({ heading, checkTrue,cardtype,Details }) {
     const [events, setEvents] = useState([]);
+    
     let sheetname = cardtype=="Events"?"Events":"LatestNews"; 
     useEffect(() => {
         fetch(`https://script.google.com/macros/s/AKfycby0RsNTM3YdU95YeTr0UlG-hfEnB8f6g3MFnZV9f0Ci1R7oIudYFoI4-P7cWKuIUHSu/exec?sheet=${sheetname}`)
@@ -23,9 +25,8 @@ function CardWithContentDetails({ heading, checkTrue,cardtype,Details }) {
 
     return (
         <>
-            <div className={`${checkTrue ? 'left-align' : 'right-alignment'} mb-3`}>
-            </div>
-            <h2 className={`${checkTrue ? 'left-align' : 'right-alignment'}  span-val`}>
+          
+            <h2 className={`${checkTrue ? 'left-align' : 'right-alignment'}   heads mb-4 mt-5`}>
                 <p>
                    
                     <Link to={'/Blog'} className="web-color " style={{ textDecoration: 'underline' }}
@@ -40,17 +41,17 @@ function CardWithContentDetails({ heading, checkTrue,cardtype,Details }) {
           date={item.Date}
           head={item.Title}
           organizer={item.EventOrganizer}
-          text={item.ShortDescription}
+          text={item.DetailDescription}
           num={1}
           changeSide={checkTrue}
         />
       ))
-    : Details.map((item, index) => (
+    : events.map((item, index) => (
         <CreatenumberWithTexts
           key={index}
-          date={item.numValue}
-          head={item.headValue}
-          text={item.contentValue}
+          date={item.Date}
+          head={item.Title}
+          text={item.DetailDescription}
           num={index}
           changeSide={checkTrue}
         />
@@ -84,32 +85,31 @@ function CreatenumberWithTexts({ date, head, text, num, changeSide, organizer })
                     </div>
                     <div className="col-sm-10">
                         <p className="apply-gray">{organizer}</p>
-                        <h5 className="fs-5 fw-6 text-uppercase font-weight-bolder heads"><b>{head}</b></h5>
-                        <p className="apply-gray-p">{text}</p>
+                        <h5 className="fs-5 fw-6 text-uppercase font-weight-bolder heads "><b>{head}</b></h5>
+                        <p className="apply-gray-p"> {truncateText(text,false)}</p>
                     </div>
                 </>
             ) : (
-                <>
-                    <div className="col-sm-11 right-alignment">
-                        <p className="apply-gray">{date}</p>
-                        <h5 className='heads'><b>{head}</b></h5>
-                        <p className="apply-gray-p">{text}</p>
+                <div className='latestNews-items'>
+                <div className="col-sm-11 right-alignment">
+                        <p className="apply-gray">{formatDateToOrdinal2(date)}</p>
+                        <h5 className="fs-5 fw-6 text-uppercase font-weight-bolder heads "><b>{head}</b></h5>
+                        <p className="apply-gray-p">{truncateText(text,false)}</p>
                     </div>
                     <div className="col-sm-1 circle-space">
                         <p
-                            className="num-circle rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
+                            className="num-circle  rounded-circle mt-5 text-white d-flex justify-content-center align-items-center"
                             style={{
                                 width: '75px',
                                 height: '75px',
                                 margin: '0',
-                                fontSize: '2rem'
+                                fontSize: '33.9px'
                             }}
                         >
-                            {num+1}<br></br>
-                            
+                            {num+1}
                         </p>
                     </div>
-                </>
+                </div>
             )}
         </>
     );
@@ -138,3 +138,46 @@ function formatDateToOrdinal(dateString) {
 }
 
 export default CardWithContentDetails;
+// getting the shorter description
+export function truncateText(text,isblog) {
+    const plainText = text.replace(/<[^>]*>/g, ''); // Remove HTML tags
+    const words = plainText.split(' ');
+
+    if (words.length > 20 ) {
+        if(isblog==false)
+        {
+            return (
+            
+                <span>
+                {words.slice(0, 20).join(' ')}...
+                <Link to="/Blog" className="web-color fs-6" style={{ textDecoration: 'none', marginLeft: '5px' }}>
+                    Read More
+                </Link>
+            </span>
+            
+           
+        );
+        }
+        else{
+            return (
+            
+                <span>
+                {words.slice(0, 20).join(' ')}...
+               
+            </span>
+            
+           
+        );
+
+        }
+       
+    }
+    else if(isblog==false)
+    {
+        return <span>{plainText}<Link to="/Blog" className="web-color fs-6" style={{ textDecoration: 'none', marginLeft: '5px' }}>
+        Read More
+    </Link></span>;  
+    }
+    return <span>{plainText}</span>
+   
+}

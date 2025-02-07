@@ -69,7 +69,7 @@ export default function BlogCard({
 }
 
 // Function to format the date into a readable string with ordinal suffix (e.g., 1st, 2nd, 3rd, etc.)
-function formatDateToOrdinal(dateString) {
+export function formatDateToOrdinal(dateString) {
     const date = new Date(dateString); // Convert string to Date object
     const day = date.getDate(); // Get day
     const month = date.toLocaleString('en-US', { month: 'long' }); // Get full month name

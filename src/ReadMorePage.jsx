@@ -8,6 +8,7 @@ import BlogCard from './BlogCard'; // Import BlogCard component
 import Logo from "./assets/logo.png"; // Import logo image
 import { FooterSection } from "./App"; // Import FooterSection component
 import HomeHeader from "./HomeHeader"; // Import HomeHeader component
+import { truncateText } from './CardWithContentDetails';
 
 // ReadMorePage component definition
 function ReadMorePage() {
@@ -19,7 +20,7 @@ function ReadMorePage() {
     const [relatedCards, setRelatedCards] = useState([]); // State to hold related cards data
     const [cardOffset, setCardOffset] = useState(0); // State to track the current offset of the displayed cards
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1189); // Check if the current screen width is mobile
-
+    let isblog=true;
     // Initialize AOS animations when the component mounts
     useEffect(() => {
         AOS.init({
@@ -124,7 +125,7 @@ function ReadMorePage() {
                                             h1id={`related-title-${index}`}
                                             graddate={card.Date} // Date for the card
                                             dateid={`related-date-${index}`}
-                                            maincont={card.ShortDescription} // Short description for the card
+                                            maincont={truncateText(card.DetailDescription,isblog)} // Short description for the card
                                             excescont={card.DetailDescription} // Full description for the card
                                             maincontid={"main-cont-id"}
                                             btnid={`readmore-related-${index}`}
@@ -153,7 +154,7 @@ function ReadMorePage() {
 
 // ContentAllDetails component to display detailed content for the selected card
 function ContentAllDetails({ head, authorName, content, date, img }) {
-    const date1 = formatDateToOrdinal(date); // Format date to an ordinal date string
+    const date1 = formatDateToOrdinal2(date); // Format date to an ordinal date string
     return (
         <>
             <h3><b>{head}</b></h3>
@@ -168,7 +169,7 @@ function ContentAllDetails({ head, authorName, content, date, img }) {
 }
 
 // Function to format date string to an ordinal format (e.g., "1st January 2025")
-function formatDateToOrdinal(dateString) {
+export function formatDateToOrdinal2(dateString) {
     const date = new Date(dateString); // Convert string to Date object
     const day = date.getDate(); // Get day
     const month = date.toLocaleString('en-US', { month: 'long' }); // Get full month name
