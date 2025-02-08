@@ -111,21 +111,14 @@ function OrganizationalStructure() {
         {sections.map((section, index) => (
           <div key={index}>
             <div className="org-row">
-              <div className="org-number-column">
-                <div className="org-number-circle">{section.number}</div>
-              </div>
+              
 
               <div className="org-title-column">{section.title}</div>
 
               <div className="org-details-column">{section.details}</div>
             </div>
               {/* Arrow Separator (except for last section) */}
-            {index < sections.length - 1 && (
-              <div className="org-arrow-container">
-                <div className="org-arrow-line"></div>
-                <div className="org-arrow-head"></div>
-              </div>
-            )}
+            
           </div>
         ))}
       </div>

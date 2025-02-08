@@ -96,11 +96,12 @@ const Timeline = () => {
             />
           ) : (
             <>
-              <h3>2009</h3>
-              <h4>Foundation of Redmond Tamil School</h4>
-              <p>
-                Founded by Arasu Elangovan and Ram Valliyappan with 16 students{" "}
-              </p>
+           
+              <h3>2001</h3>
+              <h4>First Year Milestone</h4>
+              <p>Celebrated the first successful year with 50 students enrolled.</p>
+            
+              
             </>
           )}
         </div>
@@ -117,9 +118,10 @@ const Timeline = () => {
             <img src={img} alt="First Year Milestone" className="timeline-image" />
           ) : (
             <>
-              <h3>2001</h3>
-              <h4>First Year Milestone</h4>
-              <p>Celebrated the first successful year with 50 students enrolled.</p>
+             <h3>2005</h3>
+              <h4>Expansion</h4>
+              <p>The school introduced advanced courses and new facilities.</p>
+              
             </>
           )}
         </div>
@@ -144,9 +146,9 @@ const Timeline = () => {
             <img src={img} alt="Expansion" className="timeline-image" />
           ) : (
             <>
-              <h3>2005</h3>
-              <h4>Expansion</h4>
-              <p>The school introduced advanced courses and new facilities.</p>
+              <h3>2020</h3>
+              <h4>20th Anniversary</h4>
+              <p>Celebrated two decades of excellence in Tamil education.</p>
             </>
           )}
         </div>
@@ -186,9 +188,12 @@ const Timeline = () => {
             <img src={img} alt="20th Anniversary" className="timeline-image" />
           ) : (
             <>
-              <h3>2020</h3>
-              <h4>20th Anniversary</h4>
-              <p>Celebrated two decades of excellence in Tamil education.</p>
+              
+              <h3>2009</h3>
+              <h4>Foundation of Redmond Tamil School</h4>
+              <p>
+                Founded by Arasu Elangovan and Ram Valliyappan with 16 students{" "}
+              </p>
             </>
           )}
         </div>
